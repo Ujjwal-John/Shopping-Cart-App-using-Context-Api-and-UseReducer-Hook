@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Suspense, lazy} from 'react'
 import Header from './components/Header'
 import "./App.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
-import Cart from './components/Cart'
+
+
+// Lazy loading components
+const Home = lazy(()=> import('./components/Home'));
+const Cart = lazy(()=> import('./components/Cart'));
 
 
 const App = () => {
@@ -11,14 +14,13 @@ const App = () => {
     <div className='app'>
       <BrowserRouter>
       <Header/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-
-      </Routes>
-
-      </BrowserRouter>
-      
+      <Suspense fallback={<div>Loading ...</div>}>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/cart' element={<Cart/>}/>
+        </Routes>
+      </Suspense>
+      </BrowserRouter>  
     </div>
   )
 }
