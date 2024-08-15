@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 
 const Cart = createContext();
-faker.seed(99);
+// faker.seed(99);
 
 const Context = ({children}) => {
 

@@ -12,7 +12,7 @@ const Cart = lazy(()=> import('./components/Cart'));
 const App = () => {
   return (
     <div className='app'>
-      <BrowserRouter>
+      <BrowserRouter basename='/Shopping-Cart-App-using-Context-Api-and-UseReducer-Hook'>
       <Header/>
       <Suspense fallback={<div>Loading ...</div>}>
         <Routes>
