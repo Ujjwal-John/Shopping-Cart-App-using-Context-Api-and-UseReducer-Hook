@@ -3,6 +3,7 @@
 ## Description
 
 This is a React-based shopping cart application that utilizes the Context API and the `useReducer` hook for state management. The application allows users to add items to their cart, view cart contents, filter items, manage item quantities, and calculate the total price. It also includes navigation using React Router, simulates API calls with Faker, and utilizes React Bootstrap for styling and responsive design.
+### live Demo Link:- https://ujjwal-john.github.io/Shopping-Cart-App-using-Context-Api-and-UseReducer-Hook/
 
 ## Features
 
